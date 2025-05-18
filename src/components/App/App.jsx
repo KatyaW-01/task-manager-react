@@ -10,9 +10,9 @@ function App() {
   ];
   const [tasks, setTasks] = useState(dummyTasks); //create a piece of state called tasks, starting with the value of dummyTasks. if i want to change that value later, I'll use setTasks (a function)
   return ( 
-    <main className = "App">
+    <main className="App">
       <h1>Task Manager</h1> 
-      <Tasks name="Travis"/>
+      <Tasks tasks={tasks} />
     </main>
   );  
 }
