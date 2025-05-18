@@ -1,7 +1,15 @@
+import Card from "../Card/Card";
 import "./Tasks.css"
 
 function Tasks(props) {
-  return <h2>Hello, {props.name}! </h2>;
+  const { name } = props;
+  return (
+    <div className="tasks-container">
+      <Card />
+      <Card />
+      <Card />
+    </div>
+  );
 }
 
 export default Tasks;

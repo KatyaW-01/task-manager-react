@@ -13,7 +13,6 @@ function App() {
     <main className = "App">
       <h1>Task Manager</h1> 
       <Tasks name="Travis"/>
-      <Tasks name="Marcus"/>
     </main>
   );  
 }
