@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import "./App.css";
 import Tasks from "../Tasks/Tasks";
+import Form from "../Form/Form";
 
 function App() {
   const dummyTasks = [
@@ -13,6 +14,7 @@ function App() {
     <main className="App">
       <h1>Task Manager</h1> 
       {!tasks.length && <h2>No tasks yet -- add some!</h2>}
+      <Form />
       <Tasks tasks={tasks} />
     </main>
   );  
