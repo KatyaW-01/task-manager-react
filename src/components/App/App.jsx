@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import "./App.css"
+import "./App.css";
+import Tasks from "../Tasks/Tasks";
 
 function App() {
   const dummyTasks = [
@@ -11,7 +12,8 @@ function App() {
   return ( 
     <main className = "App">
       <h1>Task Manager</h1> 
-      <p>Hi!</p>
+      <Tasks name="Travis"/>
+      <Tasks name="Marcus"/>
     </main>
   );  
 }

@@ -1,7 +1,7 @@
 import "./Tasks.css"
 
-function Tasks() {
-  return <h2>Tasks go here!</h2>;
+function Tasks(props) {
+  return <h2>Hello, {props.name}! </h2>;
 }
 
 export default Tasks;
