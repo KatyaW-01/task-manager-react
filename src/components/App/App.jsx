@@ -12,6 +12,7 @@ function App() {
   return ( 
     <main className="App">
       <h1>Task Manager</h1> 
+      {!tasks.length && <h2>No tasks yet -- add some!</h2>}
       <Tasks tasks={tasks} />
     </main>
   );  
