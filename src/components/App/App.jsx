@@ -10,12 +10,23 @@ function App() {
     {id: 3, title: "Learn a martial art", description: "To exact vengeance upon my enemies"}
   ];
   const [tasks, setTasks] = useState(dummyTasks); //create a piece of state called tasks, starting with the value of dummyTasks. if i want to change that value later, I'll use setTasks (a function)
+
+  function addTask(newTask) {
+    setTasks([...tasks, newTask]);
+  }
+
+  function deleteTask(id) {
+    console.log(id);
+    const filteredTasks = tasks.filter((tasks) => tasks.id !== id);
+    setTasks(filteredTasks);
+  }
+
   return ( 
     <main className="App">
       <h1>Task Manager</h1> 
       {!tasks.length && <h2>No tasks yet -- add some!</h2>}
-      <Form />
-      <Tasks tasks={tasks} />
+      <Form addTask={addTask}/>
+      <Tasks tasks={tasks} deleteTask={deleteTask}/>
     </main>
   );  
 }
